@@ -7,7 +7,7 @@ The output can be jar / war. Default packaging type is jar, if not specified.
 Frameworks and libs used in a project. Dependencies of dependency are called transitive dependencies. Maven downloads transitive dependencies as well.
 
 ## parent POM
-All parent POM properties are inherited by child POM. Effective POM reflects parent POM properties as well. <dependencyManagement> tag in Effective POM outlines all dependencies including their versions.
+All parent POM properties are inherited by child POM - all spring-boot-starter projects have parent POM. Effective POM reflects parent POM properties as well. <dependencyManagement> tag in Effective POM outlines all dependencies including their versions.
 
 ## Project Name
 <groupId> is similar to package name - indicates a namespace
@@ -42,4 +42,12 @@ All POMs extend the super POM.
 7. mvn install - mvn package + puts a jar file in local repo
 8. mvn help:effective-pom - prints effective pom
 9. mvn dependency:tree - prints project dependencies
+
+# Minimal pom.xml
+<project>
+    <modelVersion></modelVersion>
+    <groupId></groupId>
+    <artifactId></artifactId>
+    <version></version>
+</project>
     
